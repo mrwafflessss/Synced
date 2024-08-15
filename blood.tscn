@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnevl2clqynl"]
+
+[ext_resource type="Texture2D" uid="uid://8548uv18gy2b" path="res://Scenes/B100_nyknck/B100.png" id="1_tisqe"]
+[ext_resource type="Texture2D" uid="uid://d3xlnbah0j15s" path="res://Scenes/B100_nyknck/B101.png" id="2_6uapg"]
+[ext_resource type="Texture2D" uid="uid://dxh6cohs5lm64" path="res://Scenes/B100_nyknck/B102.png" id="3_cfiqv"]
+[ext_resource type="Script" path="res://blood.gd" id="4_y0kks"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l4cok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tisqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6uapg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cfiqv")
+}],
+"loop": false,
+"name": &"Blood",
+"speed": 5.0
+}]
+
+[node name="Blood" type="AnimatedSprite2D"]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_l4cok")
+animation = &"Blood"
+autoplay = "Blood"
+script = ExtResource("4_y0kks")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

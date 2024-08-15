@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvxlacy4u7lmr"]
+
+[ext_resource type="Script" path="res://Titlescreen.gd" id="1_eb3tb"]
+
+[node name="Titlescreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eb3tb")
+
+[node name="Startbutton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 226.0
+offset_right = 714.0
+offset_bottom = 294.0
+text = "START"
+
+[connection signal="pressed" from="Startbutton" to="." method="_on_startbutton_pressed"]

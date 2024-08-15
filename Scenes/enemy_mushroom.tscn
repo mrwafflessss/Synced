@@ -1,0 +1,123 @@
+[gd_scene load_steps=18 format=3 uid="uid://0d0138nlr20k"]
+
+[ext_resource type="Texture2D" uid="uid://bco3sd37y0di0" path="res://Ghoul Sprite Sheet.png" id="1_cqs72"]
+[ext_resource type="Script" path="res://Scenes/enemy_mushroom.gd" id="1_d7sno"]
+[ext_resource type="Texture2D" uid="uid://dcw3h0212q6tu" path="res://Zombie.png" id="3_8cly7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_16dix"]
+radius = 7.28011
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g08bq"]
+atlas = ExtResource("1_cqs72")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dybl6"]
+atlas = ExtResource("1_cqs72")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n55i"]
+atlas = ExtResource("1_cqs72")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5so6"]
+atlas = ExtResource("1_cqs72")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uggfx"]
+atlas = ExtResource("3_8cly7")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvulq"]
+atlas = ExtResource("3_8cly7")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0wo2"]
+atlas = ExtResource("3_8cly7")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnodu"]
+atlas = ExtResource("3_8cly7")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqe3f"]
+atlas = ExtResource("3_8cly7")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs4mx"]
+atlas = ExtResource("3_8cly7")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42rrq"]
+atlas = ExtResource("3_8cly7")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ydiui"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g08bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dybl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n55i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5so6")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uggfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvulq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0wo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnodu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqe3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs4mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42rrq")
+}],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dxp7u"]
+radius = 7.07107
+
+[node name="enemy-crawler" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_d7sno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_16dix")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ydiui")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_dxp7u")
+
+[node name="Damage timer" type="Timer" parent="."]
