@@ -26,6 +26,7 @@ func enemy_die():
 	var new_blood = BLOOD.instantiate()
 	new_blood.global_position = global_position
 	add_sibling(new_blood)
+	
 	var new_gem = ZOMBIE_PLAZMA.instantiate()
 	new_gem.global_position = global_position
 	add_sibling(new_gem)
