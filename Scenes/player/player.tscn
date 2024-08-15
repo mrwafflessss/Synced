@@ -177,7 +177,8 @@ shape = SubResource("CapsuleShape2D_kgm7r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3uclb")
-animation = &"Idle"
+animation = &"Running"
+autoplay = "Running"
 
 [node name="Bullet timer" type="Timer" parent="."]
 autostart = true

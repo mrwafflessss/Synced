@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -200.0
 @onready var sprite = $sprite
 @onready var player = get_tree().get_first_node_in_group("Player")
 const BLOOD = preload("res://blood.tscn")
-const ZOMBIE_PLAZMA = preload("res://zombie_plazma.tscn")
+
 
 
 func _physics_process(delta):
@@ -27,6 +27,5 @@ func enemy_die():
 	new_blood.global_position = global_position
 	add_sibling(new_blood)
 	
-	var new_gem = ZOMBIE_PLAZMA.instantiate()
-	new_gem.global_position = global_position
-	add_sibling(new_gem)
+	
+	

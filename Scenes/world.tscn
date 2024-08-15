@@ -90,6 +90,8 @@ sources/0 = SubResource("TileSetAtlasSource_s7o6u")
 
 [node name="Player" parent="." instance=ExtResource("1_j3oa2")]
 position = Vector2(95, 44)
+ACCELERATION = 30.0
+FRICTION = 15.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-8, 5)
