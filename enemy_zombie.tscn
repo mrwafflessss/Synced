@@ -1,91 +1,96 @@
-[gd_scene load_steps=13 format=3 uid="uid://biadnygu5qwsd"]
+[gd_scene load_steps=14 format=3 uid="uid://csfabpbc7xdj2"]
 
 [ext_resource type="Texture2D" uid="uid://dcw3h0212q6tu" path="res://Zombie.png" id="1_7d6y8"]
+[ext_resource type="Script" path="res://enemy_zombie.gd" id="1_07if5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g2h5p"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_01luw"]
 radius = 7.07107
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_10ixe"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl1ms"]
 atlas = ExtResource("1_7d6y8")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iclcw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cewvc"]
 atlas = ExtResource("1_7d6y8")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(32, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rqn6v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2si6j"]
 atlas = ExtResource("1_7d6y8")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(64, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_plthj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqgq6"]
 atlas = ExtResource("1_7d6y8")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(96, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ja661"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpm5i"]
 atlas = ExtResource("1_7d6y8")
-region = Rect2(128, 0, 32, 32)
+region = Rect2(128, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kur4p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vq4g"]
 atlas = ExtResource("1_7d6y8")
-region = Rect2(160, 0, 32, 32)
+region = Rect2(160, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_swf2d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjaie"]
 atlas = ExtResource("1_7d6y8")
-region = Rect2(192, 0, 32, 32)
+region = Rect2(192, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dx3i3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_adx8q"]
 atlas = ExtResource("1_7d6y8")
-region = Rect2(224, 0, 32, 32)
+region = Rect2(224, 64, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xe127"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0nf8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_10ixe")
+"texture": SubResource("AtlasTexture_xl1ms")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iclcw")
+"texture": SubResource("AtlasTexture_cewvc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rqn6v")
+"texture": SubResource("AtlasTexture_2si6j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_plthj")
+"texture": SubResource("AtlasTexture_iqgq6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ja661")
+"texture": SubResource("AtlasTexture_fpm5i")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kur4p")
+"texture": SubResource("AtlasTexture_4vq4g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_swf2d")
+"texture": SubResource("AtlasTexture_kjaie")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dx3i3")
+"texture": SubResource("AtlasTexture_adx8q")
 }],
 "loop": true,
-"name": &"Zombie",
+"name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tj7ls"]
-radius = 5.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_l7ae8"]
+radius = 7.0
 
-[node name="Enemy-Zombie" type="CharacterBody2D"]
+[node name="EnemyZombie" type="CharacterBody2D" groups=["Enemy", "enemy"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_07if5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_g2h5p")
+shape = SubResource("CircleShape2D_01luw")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_xe127")
-animation = &"Zombie"
-autoplay = "Zombie"
+sprite_frames = SubResource("SpriteFrames_w0nf8")
+autoplay = "default"
+frame = 5
+frame_progress = 0.442826
 
-[node name="Hurtbox" type="Area2D" parent="."]
+[node name="Hurt box" type="Area2D" parent="."]
 collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-shape = SubResource("CircleShape2D_tj7ls")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt box"]
+shape = SubResource("CircleShape2D_l7ae8")
 
-[node name="damagetimer" type="Timer" parent="."]
+[node name="DmageTimer" type="Timer" parent="Hurt box"]

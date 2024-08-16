@@ -9,6 +9,7 @@ const BLOOD = preload("res://blood.tscn")
 
 
 
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	var direction_to_player = global_position.direction_to(player.global_position)
 	velocity = direction_to_player * SPEED

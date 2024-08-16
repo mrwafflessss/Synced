@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blwrirh2o2jad"]
+
+[ext_resource type="AudioStream" uid="uid://b0um65j7ql86m" path="res://black ops 3 soundtrack/044 Black Ops - Damned.mp3" id="1_2jwed"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_2jwed")
+volume_db = -10.306
+autoplay = true

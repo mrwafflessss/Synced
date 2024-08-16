@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0um65j7ql86m"
+path="res://.godot/imported/044 Black Ops - Damned.mp3-ce824ca00957b052862061ec1d5bc9cb.mp3str"
+
+[deps]
+
+source_file="res://black ops 3 soundtrack/044 Black Ops - Damned.mp3"
+dest_files=["res://.godot/imported/044 Black Ops - Damned.mp3-ce824ca00957b052862061ec1d5bc9cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
