@@ -182,7 +182,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Enemy_zombie",
-"speed": 10.0
+"speed": 8.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dxp7u"]
@@ -198,8 +198,10 @@ shape = SubResource("CircleShape2D_16dix")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ydiui")
-animation = &"Enemy_idle"
-autoplay = "Enemy_idle"
+animation = &"Enemy_zombie"
+autoplay = "Enemy_zombie"
+frame = 1
+frame_progress = 0.0665889
 
 [node name="hurtbox" type="Area2D" parent="."]
 collision_layer = 0

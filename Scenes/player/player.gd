@@ -17,7 +17,7 @@ func _physics_process(_delta):
 		velocity = velocity.move_toward(direction * SPEED, ACCELERATION)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
-		
+	
 	if velocity.x > 0:
 		sprite.flip_h = false
 	elif velocity.x < 0:
@@ -31,6 +31,7 @@ func _on_bullet_timer_timeout():
 	bullet.global_position = global_position
 	bullet.rotate(direction.angle())
 	world.add_child(bullet)
+	bullet.look_at(get_global_mouse_position())
 
 
 func _on_pickup_zone_area_entered(area):
