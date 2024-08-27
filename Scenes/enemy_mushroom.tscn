@@ -186,7 +186,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dxp7u"]
-radius = 7.07107
+radius = 12.0416
 
 [node name="enemy-crawler" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 2

@@ -179,6 +179,7 @@ shape = SubResource("CapsuleShape2D_kgm7r")
 sprite_frames = SubResource("SpriteFrames_3uclb")
 animation = &"Running"
 autoplay = "Running"
+flip_h = true
 
 [node name="Bullet timer" type="Timer" parent="."]
 autostart = true

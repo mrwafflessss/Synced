@@ -22,16 +22,23 @@ func _physics_process(_delta):
 		sprite.flip_h = false
 	elif velocity.x < 0:
 		sprite.flip_h = true
+	if Input.is_action_just_released("shoot"):
+		var bullet = BULLET_1.instantiate()
+		bullet.global_position = global_position
+		bullet.rotate(direction.angle())
+		world.add_child(bullet)
+		bullet.look_at(get_global_mouse_position())
+		
 
 	move_and_slide()
 
 
-func _on_bullet_timer_timeout():
-	var bullet = BULLET_1.instantiate()
-	bullet.global_position = global_position
-	bullet.rotate(direction.angle())
-	world.add_child(bullet)
-	bullet.look_at(get_global_mouse_position())
+#func _on_bullet_timer_timeout():
+	#var bullet = BULLET_1.instantiate()
+	#bullet.global_position = global_position
+	#bullet.rotate(direction.angle())
+	#world.add_child(bullet)
+	#bullet.look_at(get_global_mouse_position())
 
 
 func _on_pickup_zone_area_entered(area):
