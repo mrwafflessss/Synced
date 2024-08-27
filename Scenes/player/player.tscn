@@ -1,169 +1,81 @@
-[gd_scene load_steps=28 format=3 uid="uid://dv56eyh1b7oe0"]
+[gd_scene load_steps=21 format=3 uid="uid://dv56eyh1b7oe0"]
 
 [ext_resource type="Script" path="res://Scenes/player/player.gd" id="1_5gsjh"]
-[ext_resource type="Texture2D" uid="uid://b7udxqy2wtatn" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Death.png" id="2_tofha"]
-[ext_resource type="Texture2D" uid="uid://wfk8hkwv4jfa" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Jump.png" id="3_jm0um"]
-[ext_resource type="Texture2D" uid="uid://cyavea5ons1m7" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Idle.png" id="3_v0etm"]
-[ext_resource type="Texture2D" uid="uid://4iwraa47i125" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Run.png" id="6_ctuef"]
+[ext_resource type="Texture2D" uid="uid://gmp8hdneohux" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle down1.png" id="2_503yo"]
+[ext_resource type="Texture2D" uid="uid://cmlltdlr3e7pc" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle down2.png" id="3_8e2d3"]
+[ext_resource type="Texture2D" uid="uid://cf6u7qxhm8mn3" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle down3.png" id="4_lfktb"]
+[ext_resource type="Texture2D" uid="uid://diwwdp36dm3fo" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle down4.png" id="5_tthme"]
+[ext_resource type="Texture2D" uid="uid://bru1njvwqrfoc" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle left1.png" id="6_f4uwv"]
+[ext_resource type="Texture2D" uid="uid://c34y484bw2lrs" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle left2.png" id="7_tlv56"]
+[ext_resource type="Texture2D" uid="uid://cslhe4akb6y" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle left3.png" id="8_wjxl5"]
+[ext_resource type="Texture2D" uid="uid://d4lmbewpq21kx" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle left4.png" id="9_sdmdx"]
+[ext_resource type="Texture2D" uid="uid://cmntts3lk76qx" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle right1.png" id="10_p1344"]
+[ext_resource type="Texture2D" uid="uid://dv2nqoh3j8h4w" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle right2.png" id="11_rlf1j"]
+[ext_resource type="Texture2D" uid="uid://byh5hjl36d35u" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle right3.png" id="12_8t47x"]
+[ext_resource type="Texture2D" uid="uid://c1i3kxmbvmr11" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle up1.png" id="13_nlfqf"]
+[ext_resource type="Texture2D" uid="uid://buwrm001h3d01" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle right4.png" id="14_326uw"]
+[ext_resource type="Texture2D" uid="uid://cp4q3f1maotnd" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle up2.png" id="15_fmw71"]
+[ext_resource type="Texture2D" uid="uid://bbmi81x6mynm8" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle up3.png" id="16_7fomq"]
+[ext_resource type="Texture2D" uid="uid://buik3jevtp5is" path="res://Scenes/Top down character template by RgsDev/Character with pistol/idle/idle up4.png" id="17_4l221"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgm7r"]
 radius = 3.0
 height = 6.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7cdbk"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x6ipg"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cmxmi"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7vh6t"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ntu0a"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8rwyn"]
-atlas = ExtResource("3_jm0um")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sbbdd"]
-atlas = ExtResource("3_jm0um")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i3xe1"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lti3v"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cbm7f"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6elt"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wfpb4"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tww2g"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hsnqd"]
-atlas = ExtResource("2_tofha")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7d5iu"]
-atlas = ExtResource("2_tofha")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_smwa8"]
-atlas = ExtResource("2_tofha")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5wxcf"]
-atlas = ExtResource("2_tofha")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dvf5m"]
-atlas = ExtResource("2_tofha")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3sd8h"]
-atlas = ExtResource("2_tofha")
-region = Rect2(240, 0, 48, 48)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_3uclb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7cdbk")
+"texture": ExtResource("2_503yo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x6ipg")
+"texture": ExtResource("3_8e2d3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cmxmi")
+"texture": ExtResource("4_lfktb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7vh6t")
+"texture": ExtResource("5_tthme")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ntu0a")
+"texture": ExtResource("6_f4uwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tlv56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wjxl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sdmdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p1344")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rlf1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8t47x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nlfqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_326uw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fmw71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7fomq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4l221")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"new_animation",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8rwyn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sbbdd")
-}],
-"loop": true,
-"name": &"Jumping",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i3xe1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lti3v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cbm7f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i6elt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wfpb4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tww2g")
-}],
-"loop": true,
-"name": &"Running",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hsnqd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7d5iu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_smwa8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5wxcf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dvf5m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3sd8h")
-}],
-"loop": true,
-"name": &"death",
-"speed": 4.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwj2k"]
@@ -177,8 +89,10 @@ shape = SubResource("CapsuleShape2D_kgm7r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3uclb")
-animation = &"Running"
-autoplay = "Running"
+animation = &"new_animation"
+autoplay = "new_animation"
+frame = 9
+frame_progress = 0.639732
 flip_h = true
 
 [node name="Bullet timer" type="Timer" parent="."]
