@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://dv56eyh1b7oe0"]
+[gd_scene load_steps=29 format=3 uid="uid://dv56eyh1b7oe0"]
 
 [ext_resource type="Script" path="res://Scenes/player/player.gd" id="1_5gsjh"]
 [ext_resource type="Texture2D" uid="uid://b7udxqy2wtatn" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Death.png" id="2_tofha"]
 [ext_resource type="Texture2D" uid="uid://wfk8hkwv4jfa" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Jump.png" id="3_jm0um"]
 [ext_resource type="Texture2D" uid="uid://cyavea5ons1m7" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Idle.png" id="3_v0etm"]
 [ext_resource type="Texture2D" uid="uid://4iwraa47i125" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Run.png" id="6_ctuef"]
+[ext_resource type="Texture2D" uid="uid://buebp6d1ym8dt" path="res://Zombie Apocalypse Tileset/Zombie Apocalypse Tileset/survivor-move_rifle_2.png" id="6_feayr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgm7r"]
 radius = 3.0
@@ -164,6 +165,14 @@ animations = [{
 "loop": true,
 "name": &"death",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_feayr")
+}],
+"loop": true,
+"name": &"top down shooter",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwj2k"]
@@ -176,9 +185,11 @@ script = ExtResource("1_5gsjh")
 shape = SubResource("CapsuleShape2D_kgm7r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -2)
+scale = Vector2(0.128594, 0.145631)
 sprite_frames = SubResource("SpriteFrames_3uclb")
-animation = &"Running"
-autoplay = "Running"
+animation = &"top down shooter"
+autoplay = "top down shooter"
 flip_h = true
 
 [node name="Bullet timer" type="Timer" parent="."]

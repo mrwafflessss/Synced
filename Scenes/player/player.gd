@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var direction = Vector2.ZERO
-@export var SPEED = 180.0
+@export var SPEED = 1000.0
 @export var ACCELERATION = 20.0
 @export var FRICTION = 10.0
 const BULLET_1 = preload("res://bullet_1.tscn")
