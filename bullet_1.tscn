@@ -15,7 +15,7 @@ _data = {
 }
 
 [node name="Bullet 1" type="Area2D" groups=["weapon"]]
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_c8nlg")
 

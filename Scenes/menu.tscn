@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bco2q1uid8du0"]
+[gd_scene load_steps=3 format=3 uid="uid://bco2q1uid8du0"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_lcxj8"]
+[ext_resource type="Texture2D" uid="uid://ck6thrc8ut8ob" path="res://Scenes/balck ops 3 screen.jpg" id="2_cosom"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,10 +12,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lcxj8")
 
+[node name="BalckOps3Screen" type="Sprite2D" parent="."]
+position = Vector2(577, 327)
+scale = Vector2(0.6, 0.602778)
+texture = ExtResource("2_cosom")
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+offset_right = 67.0
+offset_bottom = 101.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2

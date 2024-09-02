@@ -1,179 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://dv56eyh1b7oe0"]
+[gd_scene load_steps=5 format=3 uid="uid://dv56eyh1b7oe0"]
 
 [ext_resource type="Script" path="res://Scenes/player/player.gd" id="1_5gsjh"]
-[ext_resource type="Texture2D" uid="uid://b7udxqy2wtatn" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Death.png" id="2_tofha"]
-[ext_resource type="Texture2D" uid="uid://wfk8hkwv4jfa" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Jump.png" id="3_jm0um"]
-[ext_resource type="Texture2D" uid="uid://cyavea5ons1m7" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Idle.png" id="3_v0etm"]
-[ext_resource type="Texture2D" uid="uid://4iwraa47i125" path="res://TeamGunner_By_SecretHideout_060519/TeamGunner_By_SecretHideout_060519/CHARACTER_SPRITES/Black/Gunner_Black_Run.png" id="6_ctuef"]
 [ext_resource type="Texture2D" uid="uid://buebp6d1ym8dt" path="res://Zombie Apocalypse Tileset/Zombie Apocalypse Tileset/survivor-move_rifle_2.png" id="6_feayr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgm7r"]
 radius = 3.0
 height = 6.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7cdbk"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x6ipg"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cmxmi"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7vh6t"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ntu0a"]
-atlas = ExtResource("3_v0etm")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8rwyn"]
-atlas = ExtResource("3_jm0um")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sbbdd"]
-atlas = ExtResource("3_jm0um")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i3xe1"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lti3v"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cbm7f"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6elt"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wfpb4"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tww2g"]
-atlas = ExtResource("6_ctuef")
-region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hsnqd"]
-atlas = ExtResource("2_tofha")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7d5iu"]
-atlas = ExtResource("2_tofha")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_smwa8"]
-atlas = ExtResource("2_tofha")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5wxcf"]
-atlas = ExtResource("2_tofha")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dvf5m"]
-atlas = ExtResource("2_tofha")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3sd8h"]
-atlas = ExtResource("2_tofha")
-region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3uclb"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7cdbk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x6ipg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cmxmi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7vh6t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ntu0a")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8rwyn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sbbdd")
-}],
-"loop": true,
-"name": &"Jumping",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i3xe1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lti3v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cbm7f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i6elt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wfpb4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tww2g")
-}],
-"loop": true,
-"name": &"Running",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hsnqd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7d5iu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_smwa8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5wxcf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dvf5m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3sd8h")
-}],
-"loop": true,
-"name": &"death",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_feayr")
-}],
-"loop": true,
-"name": &"top down shooter",
-"speed": 5.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwj2k"]
 radius = 34.0588
@@ -184,12 +16,11 @@ script = ExtResource("1_5gsjh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_kgm7r")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, -2)
-scale = Vector2(0.128594, 0.145631)
-sprite_frames = SubResource("SpriteFrames_3uclb")
-animation = &"top down shooter"
-autoplay = "top down shooter"
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.50276, 7.26517)
+rotation = -1.55509
+scale = Vector2(0.187739, 0.252448)
+texture = ExtResource("6_feayr")
 flip_h = true
 
 [node name="Bullet timer" type="Timer" parent="."]
