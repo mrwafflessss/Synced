@@ -12,7 +12,7 @@ const BULLET_1 = preload("res://bullet_1.tscn")
 func _physics_process(_delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	direction = Input.get_vector("left","right","up","down").normalized()
+	direction = Input.get_vector("left","right","up"," down").normalized()
 	if direction:
 		velocity = velocity.move_toward(direction * SPEED, ACCELERATION)
 	else:

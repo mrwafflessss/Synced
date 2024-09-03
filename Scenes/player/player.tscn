@@ -8,7 +8,7 @@ radius = 3.0
 height = 6.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwj2k"]
-radius = 34.0588
+radius = 35.3553
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_5gsjh")
@@ -18,7 +18,7 @@ shape = SubResource("CapsuleShape2D_kgm7r")
 
 [node name="AnimatedSprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.50276, 7.26517)
-rotation = -1.55509
+rotation = -4.66701
 scale = Vector2(0.187739, 0.252448)
 texture = ExtResource("6_feayr")
 flip_h = true
@@ -29,6 +29,7 @@ autostart = true
 [node name="PickupZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupZone"]
+position = Vector2(-1, 7)
 shape = SubResource("CircleShape2D_kwj2k")
 
 [connection signal="timeout" from="Bullet timer" to="." method="_on_bullet_timer_timeout"]
