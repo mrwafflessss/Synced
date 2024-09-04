@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://baq1ys16uee1a"]
+
+[ext_resource type="AudioStream" uid="uid://ccrck2e8ybjg7" path="res://003 Nacht Der Untoten - Round Start.mp3" id="1_ek11x"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_ek11x")

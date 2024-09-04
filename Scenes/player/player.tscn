@@ -4,23 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://buebp6d1ym8dt" path="res://Zombie Apocalypse Tileset/Zombie Apocalypse Tileset/survivor-move_rifle_2.png" id="6_feayr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgm7r"]
-radius = 3.0
-height = 6.0
+radius = 19.0255
+height = 38.051
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwj2k"]
 radius = 35.3553
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+rotation = 3.07997
 script = ExtResource("1_5gsjh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.8147e-06, -1.43051e-06)
+rotation = 0.185635
 shape = SubResource("CapsuleShape2D_kgm7r")
 
 [node name="AnimatedSprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.50276, 7.26517)
-rotation = -4.66701
+position = Vector2(-0.15377, 0.21366)
+rotation = -15.6403
 scale = Vector2(0.187739, 0.252448)
 texture = ExtResource("6_feayr")
+offset = Vector2(-40.2921, -10.7678)
 flip_h = true
 
 [node name="Bullet timer" type="Timer" parent="."]
@@ -29,6 +33,7 @@ autostart = true
 [node name="PickupZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupZone"]
+visible = false
 position = Vector2(-1, 7)
 shape = SubResource("CircleShape2D_kwj2k")
 
