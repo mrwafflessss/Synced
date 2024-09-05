@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://blwrirh2o2jad"]
+[gd_scene load_steps=3 format=3 uid="uid://blwrirh2o2jad"]
 
 [ext_resource type="AudioStream" uid="uid://b0um65j7ql86m" path="res://black ops 3 soundtrack/044 Black Ops - Damned.mp3" id="1_2jwed"]
+[ext_resource type="AudioStream" uid="uid://ccrck2e8ybjg7" path="res://003 Nacht Der Untoten - Round Start.mp3" id="2_x7hgu"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_2jwed")
-volume_db = -10.306
+volume_db = -14.054
 autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_x7hgu")
+volume_db = -28.108

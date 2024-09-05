@@ -4,3 +4,5 @@
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_ek11x")
+volume_db = 8.432
+autoplay = true

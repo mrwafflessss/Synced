@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv56eyh1b7oe0"]
+[gd_scene load_steps=6 format=3 uid="uid://dv56eyh1b7oe0"]
 
 [ext_resource type="Script" path="res://Scenes/player/player.gd" id="1_5gsjh"]
+[ext_resource type="PackedScene" uid="uid://cnqbrpcpy4ye8" path="res://Scenes/control.tscn" id="3_rpfqi"]
 [ext_resource type="Texture2D" uid="uid://buebp6d1ym8dt" path="res://Zombie Apocalypse Tileset/Zombie Apocalypse Tileset/survivor-move_rifle_2.png" id="6_feayr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgm7r"]
@@ -36,6 +37,10 @@ autostart = true
 visible = false
 position = Vector2(-1, 7)
 shape = SubResource("CircleShape2D_kwj2k")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="UI" instance=ExtResource("3_rpfqi")]
 
 [connection signal="timeout" from="Bullet timer" to="." method="_on_bullet_timer_timeout"]
 [connection signal="area_entered" from="PickupZone" to="." method="_on_pickup_zone_area_entered"]

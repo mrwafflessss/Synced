@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 65.0
+const SPEED = 115.0
 const JUMP_VELOCITY = -200.0
 @onready var sprite = $sprite
 @onready var player = get_tree().get_first_node_in_group("Player")
@@ -34,6 +34,7 @@ func _physics_process(delta):
 
 
 func enemy_die():
+	GameManager.score += 10
 	queue_free()
 	var new_blood = BLOOD.instantiate()
 	new_blood.global_position = global_position
