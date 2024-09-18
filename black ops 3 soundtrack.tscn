@@ -5,11 +5,12 @@
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_2jwed")
-volume_db = -13.117
+volume_db = -19.676
 autoplay = true
 mix_target = 1
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_5m31a")
-volume_db = 13.117
+volume_db = 8.432
 autoplay = true
+mix_target = 1
