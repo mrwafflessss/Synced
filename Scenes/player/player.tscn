@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dv56eyh1b7oe0"]
+[gd_scene load_steps=7 format=3 uid="uid://dv56eyh1b7oe0"]
 
 [ext_resource type="Script" path="res://Scenes/player/player.gd" id="1_5gsjh"]
 [ext_resource type="PackedScene" uid="uid://cnqbrpcpy4ye8" path="res://Scenes/control.tscn" id="3_rpfqi"]
 [ext_resource type="Texture2D" uid="uid://buebp6d1ym8dt" path="res://Zombie Apocalypse Tileset/Zombie Apocalypse Tileset/survivor-move_rifle_2.png" id="6_feayr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i27o4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgm7r"]
 radius = 19.0255
@@ -16,6 +18,11 @@ rotation = 3.07997
 script = ExtResource("1_5gsjh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i27o4")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-3.8147e-06, -1.43051e-06)
 rotation = 0.185635
 shape = SubResource("CapsuleShape2D_kgm7r")

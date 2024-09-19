@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dobrm7o5igxeb"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_1syp3"]
+[ext_resource type="Texture2D" uid="uid://kem8x86ndhkd" path="res://Black ops zombies sound/GAME over.jpg" id="2_e8avk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 530.0
+offset_right = 637.0
+offset_bottom = 586.0
+text = "Quit"
+script = ExtResource("1_1syp3")
+
+[node name="GameOver" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(575, 326)
+scale = Vector2(0.896094, 0.9)
+texture = ExtResource("2_e8avk")
